@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recyclerCampeonesFragment">
+
+    <fragment
+        android:id="@+id/recyclerCampeonesFragment"
+        android:name="com.company.a6recyclerview.RecyclerCampeonesFragment"
+        android:label="fragment_recycler_campeones"
+        tools:layout="@layout/fragment_recycler_campeones" >
+        <action
+            android:id="@+id/action_recyclerCampeonesFragment_to_mostrarCampeonesFragment"
+            app:destination="@id/mostrarcampeonesFragment" />
+        <action
+            android:id="@+id/action_recyclerCampeonesFragment_to_nuevoCampeonFragment"
+            app:destination="@id/nuevoCampeonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nuevoCampeonFragment"
+        android:name="com.company.a6recyclerview.NuevoCampeonFragment"
+        android:label="fragment_nuevo_campeon"
+        tools:layout="@layout/fragment_nuevo_campeon" />
+    <fragment
+        android:id="@+id/mostrarcampeonesFragment"
+        android:name="com.company.a6recyclerview.MostrarCampeonFragment"
+        android:label="fragment_mostrar_campeon"
+        tools:layout="@layout/fragment_mostrar_campeon" />
+</navigation>
